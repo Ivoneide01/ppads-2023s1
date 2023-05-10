@@ -3,5 +3,7 @@ export interface Fornecedor {
     nome: string;
     cnpj: string;
     email: string;
+    senha: string;
+    perfis: string[];
     dataCriacao: any;
 }

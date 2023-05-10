@@ -11,13 +11,16 @@ import { FornecedorService } from 'src/app/services/fornecedor.service';
 })
 export class FornecedorDeleteComponent implements OnInit {
 
-  fornecedor: Fornecedor = {
+  tecnico: Fornecedor = {
     id: '',
     nome: '',
     cnpj: '',
     email: '',
+    senha: '',
+    perfis: [],
     dataCriacao: ''
   }
+  fornecedor: any;
 
   constructor(
     private service: FornecedorService,
@@ -33,6 +36,7 @@ export class FornecedorDeleteComponent implements OnInit {
 
   findById(): void {
     this.service.findById(this.fornecedor.id).subscribe(resposta => {
+      resposta.perfis = [];
       this.fornecedor = resposta;
     })
   }
