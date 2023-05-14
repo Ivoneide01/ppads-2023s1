@@ -39,7 +39,7 @@ export class FornecedorCreateComponent implements OnInit {
 
   create(): void {
     this.service.create(this.fornecedor).subscribe(() => {
-      this.toast.success('Técnico cadastrado com sucesso', 'Cadastro');
+      this.toast.success('Fornecedor cadastrado com sucesso', 'Cadastro');
       this.router.navigate(['fornecedores']);
     }, ex => {
       console.log(ex);

@@ -1,0 +1,49 @@
+<div class="container mat-elevation-z8">
+    <form action="" class="form">
+        <h1 class="fullWidth">Cadastrar Livro</h1>
+        <img class="fullWidth" src="assets/img/tecnico-create.svg" alt="Loja de livros - IBECH">
+
+        <mat-form-field class="fullWidth" appearance="legacy">
+            <mat-label>Título</mat-label>
+            <input
+            [(ngModel)]="livro.titulo"
+            name="titulo"
+            [formControl]="titulo"
+            required 
+            matInput 
+            placeholder="Ex. Titulo do livro"
+            maxlength="100">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="fullWidth" appearance="legacy">
+            <mat-label>Autor</mat-label>
+            <input 
+            [(ngModel)]="livro.autor"
+            name="autor"
+            [formControl]="autor"
+            required
+            matInput 
+            placeholder="Ex. Fulano de Tal"
+            maxlength="100">
+            <mat-icon matSuffix>pin</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="fullWidth" appearance="legacy">
+            <mat-label>Preço</mat-label>
+            <input 
+            [(ngModel)]="livro.preco"
+            name="preco"
+            [formControl]="preco"
+            required
+            matInput 
+            placeholder="Ex. 000.00">
+            <mat-icon matSuffix>email</mat-icon>
+          </mat-form-field>
+
+          <button (click)="create()" [disabled]="!validaCampos()" mat-flat-button class="fullWidth" color="primary">Cadastrar</button>
+          <button routerLink="../" mat-stroked-button class="fullWidth" color="warn">Cancelar</button>
+    </form>
+
+    <p class="fullWidth">IBECH</p>
+</div>
