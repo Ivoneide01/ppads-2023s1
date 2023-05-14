@@ -46,6 +46,8 @@ import { ClienteListComponent } from './components/cliente/cliente-list/cliente-
 import { LivrosListComponent } from './components/livros/livros-list/livros-list.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { LivrosCreateComponent } from './components/livros/livros-create/livros-create.component';
+import { LivrosUpdateComponent } from './components/livros/livros-update/livros-update.component';
+import { LivrosDeleteComponent } from './components/livros/livros-delete/livros-delete.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +66,8 @@ import { LivrosCreateComponent } from './components/livros/livros-create/livros-
     ClienteListComponent,
     LivrosListComponent,
     LivrosCreateComponent,
+    LivrosUpdateComponent,
+    LivrosDeleteComponent,
     PedidosComponent,
 
   ],

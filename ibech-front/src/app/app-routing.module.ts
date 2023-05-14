@@ -15,6 +15,8 @@ import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-up
 import { LivrosListComponent } from './components/livros/livros-list/livros-list.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { LivrosCreateComponent } from './components/livros/livros-create/livros-create.component';
+import { LivrosUpdateComponent } from './components/livros/livros-update/livros-update.component';
+import { LivrosDeleteComponent } from './components/livros/livros-delete/livros-delete.component';
 
 
 const routes: Routes = [
@@ -31,6 +33,8 @@ const routes: Routes = [
     { path: 'clientes/delete/:id', component: ClienteDeleteComponent },
     { path: 'livros', component: LivrosListComponent },
     { path: 'livros/create', component: LivrosCreateComponent },
+    { path: 'livros/update/:id', component: LivrosUpdateComponent},
+    { path: 'livros/delete/:id', component: LivrosDeleteComponent},
     { path: 'pedidos', component: PedidosComponent },
 
 
