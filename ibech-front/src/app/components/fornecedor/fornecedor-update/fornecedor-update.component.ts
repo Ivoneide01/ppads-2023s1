@@ -17,8 +17,6 @@ export class FornecedorUpdateComponent implements OnInit {
     nome: '',
     cnpj: '',
     email: '',
-    senha: '',
-    perfis: [],
     dataCriacao: ''
   }
 
@@ -41,23 +39,14 @@ export class FornecedorUpdateComponent implements OnInit {
 
   findById(): void {
     this.service.findById(this.fornecedor.id).subscribe(resposta => {
-      resposta.perfis = [];
       this.fornecedor = resposta;
     })
   }
 
   validaCampos(): boolean {
-    return this.nome.valid && this.cnpj.valid && this.email.valid && this.senha.valid;
+    return this.nome.valid && this.cnpj.valid && this.email.valid;
   }
   
-  addPerfil(perfil: any): void{
-    if (this.fornecedor.perfis.includes(perfil)){
-      this.fornecedor.perfis.splice(this.fornecedor.perfis.indexOf(perfil), 1)
-    } else {
-      this.fornecedor.perfis.push(perfil);
-    }
-  }
-
   update(): void {
     this.service.update(this.fornecedor).subscribe(() => {
       this.toast.success('Fornecedor atualizado com sucesso', 'Update');

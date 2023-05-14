@@ -3,8 +3,6 @@
         <h1 class="fullWidth">Cadastrar Fornecedor</h1>
         <img class="fullWidth" src="assets/img/tecnico-create.svg" alt="Loja de livros - IBECH">
 
-       
-
         <mat-form-field class="fullWidth" appearance="legacy">
             <mat-label>Nome</mat-label>
             <input
@@ -41,19 +39,6 @@
             matInput 
             placeholder="Ex. seuemail@email.com">
             <mat-icon matSuffix>email</mat-icon>
-          </mat-form-field>
-
-          <mat-form-field class="fullWidth" appearance="legacy">
-            <mat-label>Senha</mat-label>
-            <input 
-            [(ngModel)]="fornecedor.senha"
-            name="senha"
-            [formControl]="senha"
-            required
-            type="password" 
-            matInput 
-            placeholder="Ex. 1234">
-            <mat-icon matSuffix>password</mat-icon>
           </mat-form-field>
 
           <button (click)="create()" [disabled]="!validaCampos()" mat-flat-button class="fullWidth" color="primary">Cadastrar</button>
