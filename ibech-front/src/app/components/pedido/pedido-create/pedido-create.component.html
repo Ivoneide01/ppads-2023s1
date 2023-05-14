@@ -1,0 +1,34 @@
+<div class="container mat-elevation-z8">
+    <form action="" class="form">
+        <h1 class="fullWidth">Cadastrar Livro</h1>
+        <img class="fullWidth" src="assets/img/livro-create.svg" alt="Loja de livros - IBECH">
+
+        <mat-form-field class="fullWidth" appearance="fill">
+          <mat-label>Cliente</mat-label>
+          <mat-select [(ngModel)]="pedido.cliente" name="cliente">
+            <mat-option *ngFor="let cliente of clientes" 
+            [value]="cliente.id">
+              {{cliente.nome}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth" appearance="legacy">
+            <mat-label>Título</mat-label>
+            <input
+            [(ngModel)]="pedido.valor"
+            name="valor"
+            [formControl]="valor"
+            required 
+            matInput 
+            placeholder="Ex. 000,00"
+            maxlength="100">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+
+          <button (click)="create()" [disabled]="!validaCampos()" mat-flat-button class="fullWidth" color="primary">Cadastrar</button>
+          <button routerLink="../" mat-stroked-button class="fullWidth" color="warn">Cancelar</button>
+    </form>
+
+    <p class="fullWidth">IBECH</p>
+</div>

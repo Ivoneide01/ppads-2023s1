@@ -13,10 +13,11 @@ import { FornecedorDeleteComponent } from './components/fornecedor/fornecedor-de
 import { FornecedorListComponent } from './components/fornecedor/fornecedor-list/fornecedor-list.component';
 import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
 import { LivrosListComponent } from './components/livros/livros-list/livros-list.component';
-import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { LivrosCreateComponent } from './components/livros/livros-create/livros-create.component';
 import { LivrosUpdateComponent } from './components/livros/livros-update/livros-update.component';
 import { LivrosDeleteComponent } from './components/livros/livros-delete/livros-delete.component';
+import { PedidoListComponent } from './components/pedido/pedido-list/pedido-list.component';
+import { PedidoCreateComponent } from './components/pedido/pedido-create/pedido-create.component';
 
 
 const routes: Routes = [
@@ -35,7 +36,8 @@ const routes: Routes = [
     { path: 'livros/create', component: LivrosCreateComponent },
     { path: 'livros/update/:id', component: LivrosUpdateComponent},
     { path: 'livros/delete/:id', component: LivrosDeleteComponent},
-    { path: 'pedidos', component: PedidosComponent },
+    { path: 'pedidos', component: PedidoListComponent },
+    { path: 'pedidos/create', component: PedidoCreateComponent }
 
 
     

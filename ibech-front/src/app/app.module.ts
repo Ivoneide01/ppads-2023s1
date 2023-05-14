@@ -44,10 +44,12 @@ import { ClienteUpdateComponent } from './components/cliente/cliente-update/clie
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 import { LivrosListComponent } from './components/livros/livros-list/livros-list.component';
-import { PedidosComponent } from './components/pedidos/pedidos.component';
+
 import { LivrosCreateComponent } from './components/livros/livros-create/livros-create.component';
 import { LivrosUpdateComponent } from './components/livros/livros-update/livros-update.component';
 import { LivrosDeleteComponent } from './components/livros/livros-delete/livros-delete.component';
+import { PedidoListComponent } from './components/pedido/pedido-list/pedido-list.component';
+import { PedidoCreateComponent } from './components/pedido/pedido-create/pedido-create.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +70,8 @@ import { LivrosDeleteComponent } from './components/livros/livros-delete/livros-
     LivrosCreateComponent,
     LivrosUpdateComponent,
     LivrosDeleteComponent,
-    PedidosComponent,
+    PedidoListComponent,
+    PedidoCreateComponent
 
   ],
   imports: [
