@@ -3,6 +3,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Pedido } from 'src/app/models/pedidos';
 import { PedidoService } from 'src/app/services/pedido.service';
+import ptBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
 
 @Component({
   selector: 'app-pedido-list',
@@ -23,6 +25,7 @@ export class PedidoListComponent implements OnInit {
 
   ngOnInit(): void {
     this.findAll();
+    registerLocaleData(ptBr);
   }
 
   findAll() {

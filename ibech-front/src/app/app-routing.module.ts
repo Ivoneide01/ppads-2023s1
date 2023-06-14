@@ -18,6 +18,8 @@ import { LivrosUpdateComponent } from './components/livros/livros-update/livros-
 import { LivrosDeleteComponent } from './components/livros/livros-delete/livros-delete.component';
 import { PedidoListComponent } from './components/pedido/pedido-list/pedido-list.component';
 import { PedidoCreateComponent } from './components/pedido/pedido-create/pedido-create.component';
+import { PedidoUpdateComponent } from './components/pedido/pedido-update/pedido-update.component';
+import { PedidoDeleteComponent } from './components/pedido/pedido-delete/pedido-delete.component';
 
 
 const routes: Routes = [
@@ -37,13 +39,9 @@ const routes: Routes = [
     { path: 'livros/update/:id', component: LivrosUpdateComponent},
     { path: 'livros/delete/:id', component: LivrosDeleteComponent},
     { path: 'pedidos', component: PedidoListComponent },
-    { path: 'pedidos/create', component: PedidoCreateComponent }
-
-
-    
-    
-    
-
+    { path: 'pedidos/create', component: PedidoCreateComponent },
+    { path: 'pedidos/update/:id', component: PedidoUpdateComponent },
+    { path: 'pedidos/delete/:id', component: PedidoDeleteComponent }
 
   ] }
 ];

@@ -32,11 +32,14 @@
         <mat-form-field class="fullWidth" appearance="legacy">
           <mat-label>Preço</mat-label>
           <input 
+          class="left"
           [(ngModel)]="livro.preco"
           name="preco"
           [formControl]="preco"
           required
           matInput 
+          currencyMask 
+          [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
           placeholder="Ex. 000.00">
           <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>

@@ -1,6 +1,6 @@
 <div class="container mat-elevation-z8">
     <form action="" class="form">
-        <h1 class="fullWidth">Cadastrar Livro</h1>
+        <h1 class="fullWidth">Cadastrar Pedido</h1>
         <img class="fullWidth" src="assets/img/livro-create.svg" alt="Loja de livros - IBECH">
 
         <mat-form-field class="fullWidth" appearance="fill">
@@ -14,15 +14,18 @@
         </mat-form-field>
 
         <mat-form-field class="fullWidth" appearance="legacy">
-            <mat-label>Título</mat-label>
+            <mat-label>Valor do pedido</mat-label>
             <input
+            class="left"
             [(ngModel)]="pedido.valor"
             name="valor"
             [formControl]="valor"
             required 
-            matInput 
+            matInput
             placeholder="Ex. 000,00"
-            maxlength="100">
+            currencyMask 
+            [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+            maxlength="100000">
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
           </mat-form-field>
 

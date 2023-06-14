@@ -3,6 +3,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Livro } from 'src/app/models/livro';
 import { LivroService } from 'src/app/services/livro.service';
+import ptBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
 
 @Component({
   selector: 'app-livros-list',
@@ -28,6 +30,7 @@ export class LivrosListComponent implements OnInit {
 
   ngOnInit(): void {
     this.findAll();
+    registerLocaleData(ptBr);
   }
   @ViewChild(MatPaginator) paginator: MatPaginator;
 

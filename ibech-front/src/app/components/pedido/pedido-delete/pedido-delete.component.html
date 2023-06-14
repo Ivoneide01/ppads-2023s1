@@ -1,0 +1,37 @@
+<div class="container mat-elevation-z8">
+    <form action="" class="form">
+        <h1 class="fullWidth">Deletar pedido</h1>
+        <img class="fullWidth" src="assets/img/tecnico-create.svg" alt="Loja de livros - IBECH">
+
+        <mat-form-field class="fullWidth" appearance="legacy">
+          <mat-label>Cliente</mat-label>
+          <input
+          [(ngModel)]="pedido.nomeCliente"
+          name="cliente"
+          required 
+          matInput
+          [disabled]="true">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+    
+        <mat-form-field class="fullWidth" appearance="legacy">
+            <mat-label>Valor do pedido</mat-label>
+            <input
+            class="left"
+            [(ngModel)]="pedido.valor"
+            name="valor"
+            required 
+            matInput 
+            currencyMask 
+            [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+            [disabled]="true">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+    
+
+          <button (click)="delete()" mat-flat-button class="fullWidth" color="warn">Deletar</button>
+          <button routerLink="../../" mat-stroked-button class="fullWidth" color="warn">Cancelar</button>
+    </form>
+
+    <p class="fullWidth">IBECH</p>
+</div>

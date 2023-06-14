@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CurrencyMaskModule } from "ng2-currency-mask";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -50,6 +51,8 @@ import { LivrosUpdateComponent } from './components/livros/livros-update/livros-
 import { LivrosDeleteComponent } from './components/livros/livros-delete/livros-delete.component';
 import { PedidoListComponent } from './components/pedido/pedido-list/pedido-list.component';
 import { PedidoCreateComponent } from './components/pedido/pedido-create/pedido-create.component';
+import { PedidoUpdateComponent } from './components/pedido/pedido-update/pedido-update.component';
+import { PedidoDeleteComponent } from './components/pedido/pedido-delete/pedido-delete.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +74,9 @@ import { PedidoCreateComponent } from './components/pedido/pedido-create/pedido-
     LivrosUpdateComponent,
     LivrosDeleteComponent,
     PedidoListComponent,
-    PedidoCreateComponent
+    PedidoCreateComponent,
+    PedidoUpdateComponent,
+    PedidoDeleteComponent
 
   ],
   imports: [
@@ -95,6 +100,7 @@ import { PedidoCreateComponent } from './components/pedido/pedido-create/pedido-
     MatIconModule,
     MatListModule,
     MatCardModule,
+    CurrencyMaskModule,
     ToastrModule.forRoot({
       timeOut: 4000,
       closeButton: true,
@@ -102,7 +108,10 @@ import { PedidoCreateComponent } from './components/pedido/pedido-create/pedido-
     }),
     NgxMaskModule.forRoot()
   ],
-  providers: [AuthInterceptorProvider],
+  providers: [AuthInterceptorProvider,
+    { provide: LOCALE_ID, useValue: 'pt' },
+    { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
