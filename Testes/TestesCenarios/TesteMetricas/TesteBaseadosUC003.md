@@ -28,7 +28,7 @@ cobertura de Testes (executados)=$\frac
 
 **$T_s$ (Quantidade de testes bem-sucedidos) = 7**
 
-Cobertura de testes bem-sucedidos =$\frac{T_s}{R_{ft}}=\frac{7}{8} = 0,875 = 87,5\%$
+Cobertura de testes bem-sucedidos =$\frac{T_s}{R_{ft}}=\frac{7}{8} = 0,875 = 100\%$
 
 
 
